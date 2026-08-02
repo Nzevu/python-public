@@ -1,0 +1,6 @@
+name: Test Env
+on: [push]
+ 
+# Workflow-level env: Available to ALL jobs
+env:
+  API_KEY_TEST: "Test api key"
