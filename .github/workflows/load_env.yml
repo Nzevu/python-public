@@ -1,0 +1,13 @@
+name: Load .env Example
+on: [push]
+jobs:
+ load-env:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout code
+       uses: actions/checkout@v3
+     - name: Load .env file
+       run: |
+         set -a
+         source .env
+         set +a
