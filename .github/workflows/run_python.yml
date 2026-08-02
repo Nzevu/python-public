@@ -19,4 +19,4 @@ jobs:
           python-version: "3.12"
 
       - name: Run script
-        run: python test_env1.py
+        run: python main/test_env1.py
