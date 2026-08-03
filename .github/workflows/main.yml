@@ -1,0 +1,19 @@
+name: Use GitHub Secret
+on:
+ push:
+   branches:
+     - main
+jobs:
+ example-job:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout code
+       uses: actions/checkout@v3
+     - name: Set up Python
+       uses: actions/setup-python@v4
+       with:
+         python-version: '3.13'
+     - name: Run Python script
+       env:
+         API_KEY_TEST1: ${{ secrets.API_KEY_TEST1 }}
+       run: python test_env2.py
